@@ -1,5 +1,9 @@
 .row {
   margin-left: 20px;
+  color: white;
+  margin: 10px;
+  font-size: 1.25rem;
+  padding: 20px;
 }
 
 .row_posters {
@@ -8,7 +12,6 @@
   overflow-y: hidden;
   /* we scroll in horizontal */
   overflow-x: scroll;
-  padding: 20px;
 }
 
 /* 1:26:33 */
@@ -21,8 +24,8 @@
   /* keeps the ratio */
   object-fit: contain;
   /* width: 100%; */
-  max-height: 100px;
-  margin-right: 1vh;
+  max-height: 200px;
+  margin-right: 1.5vh;
   transition: transform 0.8s;
   border-radius: 5px;
   border: 1px solid rgb(44, 42, 42);
@@ -34,7 +37,7 @@
 }
 
 .row_posterLarge {
-  max-height: 200px;
+  max-height: 350px;
   border: 1px solid rgb(65, 122, 160);
 }
 
