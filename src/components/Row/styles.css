@@ -1,0 +1,43 @@
+.row {
+  margin-left: 20px;
+}
+
+.row_posters {
+  display: flex;
+  /* flex-direction: row; */
+  overflow-y: hidden;
+  /* we scroll in horizontal */
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+/* 1:26:33 */
+.row_posters::-webkit-scrollbar {
+  /* tell all the browsers not so show the scroll bar, but keep the functionality */
+  display: none;
+}
+
+.row_poster {
+  /* keeps the ratio */
+  object-fit: contain;
+  /* width: 100%; */
+  max-height: 100px;
+  margin-right: 1vh;
+  transition: transform 0.8s;
+  border-radius: 5px;
+  border: 1px solid rgb(44, 42, 42);
+  box-shadow: 2px 1px rgb(93, 84, 84);
+}
+
+.row_poster:hover {
+  transform: scale(1.05);
+}
+
+.row_posterLarge {
+  max-height: 200px;
+  border: 1px solid rgb(65, 122, 160);
+}
+
+.row_posterLarge:hover {
+  transform: scale(1.07);
+}
