@@ -38,6 +38,7 @@ const Banner = () => {
         backgroundPosition: "center",
       }}
     >
+      <div className="banner--fadeBottom" />
       {/* background image */}
       <div className="banner_contents">
         {/* in case the API doesn't return the expected results, we're dealing with the edge cases */}

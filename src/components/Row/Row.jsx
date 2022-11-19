@@ -25,7 +25,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
   return (
     <div className="row">
       {/* title */}
-      <h2>{title}</h2>
+      <h2 style={{ marginBottom: 20 }}>{title}</h2>
 
       <div className="row_posters">
         {/* posters */}
@@ -34,7 +34,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
           const { poster_path, backdrop_path, name, id } = movie;
 
           return (
-            <div>
+            <div style={{ padding: "0.9vh", margin: "0.2rem auto" }}>
               {/* <h2>{name}</h2> */}
               <img
                 key={id} //the identify of each element -- it helps in optimzation too
