@@ -1,0 +1,46 @@
+.image_container {
+  position: relative;
+}
+
+.container_hover {
+  /* position: fixed; */
+  height: 6rem;
+  width: 95%;
+  /* display: flex;
+  justify-content: space-between; */
+  border-bottom: 1px solid red;
+  border-radius: 5px;
+  box-shadow: 0 1px 0.1rem rgb(249, 0, 0);
+  padding: 10px;
+}
+
+.container_hover button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  transition: all 0.4s;
+}
+
+.container_hover button:hover {
+  transform: scale(1.2);
+}
+
+.save-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.save-title p {
+  width: 70%;
+}
+
+.like-dislike {
+  margin-top: 10px;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

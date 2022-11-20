@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../resources/netflix-logo.png";
-import "./styles.css";
+import "./navbar.css";
 
 const Navbar = () => {
   const [navBackground, setNavBackground] = useState(false);

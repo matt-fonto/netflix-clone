@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../data/axios";
 import requests from "../../data/requests";
-import "./styles.css";
+import "./banner.css";
 import { BsFillPlayFill } from "react-icons/bs";
 import { IoInformationCircleOutline } from "react-icons/io5";
 
