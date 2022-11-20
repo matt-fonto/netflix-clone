@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "../../data/axios"; // since we default exported it, we don't need the {} and we could call it whatever we wanted
 import "./styles.css";
+import Youtube from "react-youtube";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 const Row = ({ title, fetchUrl, isLargeRow }) => {
   const [movies, setMovies] = useState([]); //a nice way to think: in React when we need to use variables, we need the useState
-  const [showTitle, setShowTitle] = useState(false);
+  const [showTitle, setShowTitle] = useState(false); // it's still not optimal. => Fix to show only the text in which I'm hovering
+  // const [trailerURL, setTrailerURL] = useState();
 
   // let's populate our array
   useEffect(() => {
@@ -23,12 +25,20 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 
   // console.table(movies); // console.table is also great for objects and arrays
   // console.log(movies);
-  const handleMouseOver = () => {
+  const handleMouseOver = (movie) => {
     setShowTitle(true);
   };
 
-  const handleMouseOut = () => {
+  const handleMouseOut = (movie) => {
     setShowTitle(false);
+  };
+
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      autoplay: 1,
+    },
   };
 
   return (
@@ -51,16 +61,16 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
                 } //by passing this props, we could add different style to it
                 src={`${base_url}${isLargeRow ? poster_path : backdrop_path}`}
                 alt={name}
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
+                onMouseOver={() => handleMouseOver(id)}
+                onMouseOut={() => handleMouseOut(id)}
+                // onClick={() => handleClick(movie)}
               />
-              {showTitle && (
-                <p>{movie?.title || movie?.name || movie?.original_name}</p>
-              )}
+              {showTitle && <p>hey</p>}
             </div>
           );
         })}
       </div>
+      {/* {trailerURL && <Youtube opts={opts} />} */}
     </div>
   );
 };
