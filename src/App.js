@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Row from "./components/Row/Row";
 import requests from "./data/requests";
 
+//2:20:49
+
 function App() {
   return (
     <div className="app">

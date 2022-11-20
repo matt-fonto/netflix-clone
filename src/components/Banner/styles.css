@@ -1,7 +1,7 @@
 .banner {
   color: white;
   object-fit: contain;
-  height: 90vh;
+  height: 100vh;
   /* parent element */
   position: relative;
 }
