@@ -4,13 +4,13 @@
 
 .container_hover {
   /* position: fixed; */
-  height: 6rem;
+  height: 7rem;
   width: 95%;
   /* display: flex;
   justify-content: space-between; */
-  border-bottom: 1px solid red;
+  /* border-bottom: 1px solid red; */
   border-radius: 5px;
-  box-shadow: 0 1px 0.1rem rgb(249, 0, 0);
+  box-shadow: 0 1px 3px rgb(99, 99, 99);
   padding: 10px;
 }
 
@@ -23,24 +23,24 @@
 }
 
 .container_hover button:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
-.save-title {
+.title {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .save-title p {
   width: 70%;
 }
 
-.like-dislike {
+.buttons {
   margin-top: 10px;
-  width: 30%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }

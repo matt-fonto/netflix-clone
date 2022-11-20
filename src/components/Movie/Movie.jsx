@@ -13,7 +13,10 @@ const Movie = ({
   isLargeRow,
   base_url,
 }) => {
-  const [showTitle, setShowTitle] = useState(true); // it's still not optimal. => Fix to show only the text in which I'm hovering
+  const [showTitle, setShowTitle] = useState(false); // it's still not optimal. => Fix to show only the text in which I'm hovering
+  const [showAddList, setShowAddList] = useState(false);
+  const [showLike, setShowLike] = useState(false);
+  const [showDislike, setShowDislike] = useState(false);
   // const [trailerURL, setTrailerURL] = useState();
 
   const handleMouseOver = () => {
@@ -39,8 +42,8 @@ const Movie = ({
   return (
     <div
       className="movie_container"
-      //   onMouseEnter={() => handleMouseOver(id)}
-      //   onMouseLeave={() => handleMouseOut(id)}
+      onMouseEnter={() => handleMouseOver(id)}
+      onMouseLeave={() => handleMouseOut(id)}
     >
       <div className="image_container">
         <img
@@ -52,24 +55,33 @@ const Movie = ({
         />
         {showTitle && (
           <div className="container_hover">
-            <div className="save-title">
+            <div className="title">
               <p>{truncate(title || name || original_name, 20)}</p>
-              <button>
-                <BsCheck2Circle fontSize={"2rem"} />
-              </button>
             </div>
-            <div className="like-dislike">
-              <button>
-                <AiOutlineLike fontSize={"2rem"} />
+            <div className="buttons">
+              <button
+                onMouseOver={() => setShowAddList(true)}
+                onMouseLeave={() => setShowAddList(false)}
+              >
+                <BsCheck2Circle fontSize={"2rem"} />
+                {showAddList && <p>Add to list</p>}
               </button>
-              <button>
+              <button
+                onMouseOver={() => setShowLike(true)}
+                onMouseLeave={() => setShowLike(false)}
+              >
+                <AiOutlineLike fontSize={"2rem"} />
+                {showLike && <p>Like</p>}
+              </button>
+              <button
+                onMouseOver={() => setShowDislike(true)}
+                onMouseLeave={() => setShowDislike(false)}
+              >
                 <AiOutlineDislike fontSize={"2rem"} />
+                {showDislike && <p>Dislike</p>}
               </button>
             </div>
           </div>
-          // title
-          // add to list
-          // like vs. dislike
         )}
         <div className="overlay"></div>
       </div>
